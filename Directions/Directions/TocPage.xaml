@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Directions.TocPage"
+             Title="">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="info"
+                     Clicked="OnIntroductionClicked" />
+        <ToolbarItem IconImageSource="sett"
+                     Clicked="OnSettingsClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="sTDBToclistView"
+              Margin="20,5,20,5"
+              RowHeight="80"
+              ItemSelected="OnsTDBTocViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout
+                            Orientation="Vertical">
+                            <!-- sets outside of border margins -->
+                            <Frame
+                                Margin="0,0,0,0"
+                                CornerRadius="12"
+                                BackgroundColor="AntiqueWhite"
+                                OutlineColor="Black">
+                                <Label
+                                    VerticalOptions="Start" 
+                                    Text="{Binding DetailText}" 
+                                    HeightRequest="180"
+                                    Font="14"
+                                    TextColor="Black" 
+                                    BackgroundColor="AntiqueWhite"
+                                    WidthRequest="500"
+                                    Margin="0, 0, 0, 0"
+                                    LineBreakMode="WordWrap">
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

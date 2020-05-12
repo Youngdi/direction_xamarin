@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Directions.IntroPage"
+             Title="">
+    <ListView 
+            x:Name="sTDBIntrolistView"
+            Margin="20,5,20,5"
+            RowHeight="80"
+            ItemSelected="OnsTDBIntroItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell >
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout 
+                            Orientation="Vertical">
+                            <Frame
+                                Margin="10,1,10,1"
+                                CornerRadius="6"
+                                BackgroundColor="AntiqueWhite"
+                                OutlineColor="Black">
+                                <Label
+                                    VerticalOptions="Start" 
+                                    MaxLines="3"
+                                    Text="{Binding DetailText}" 
+                                    Font="14"
+                                    TextColor="Black" 
+                                    BackgroundColor="AntiqueWhite"
+                                    WidthRequest="500"
+                                    Margin="0, 0, 0, 0"
+                                    LineBreakMode="WordWrap">
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

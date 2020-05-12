@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Directions.SettingsUpdatePage"
+             Title="">
+    <StackLayout Margin="20">
+        <Label  x:Name="UserName"
+                HeightRequest="50" />
+        <Editor Placeholder="Enter your Primary Language"
+                x:Name="Lang1st"
+                HeightRequest="50" />
+        <Editor Placeholder="Enter your Secondary Language"
+                x:Name="Lang2nd"
+                HeightRequest="50" />
+        <Label  x:Name="LastPage"
+                HeightRequest="50" />
+        <Label  x:Name="FontType"
+                HeightRequest="50" />
+        <Label  x:Name="ColorText"
+                HeightRequest="50" />
+        <Label  x:Name="ColorHex"
+                HeightRequest="50" />
+        <Label  x:Name="FontSize"
+                HeightRequest="50" />
+        <Button Text="Save" 
+                    Clicked="OnSaveButtonClicked" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Blue"
+                    BackgroundColor="Aqua"
+                    BorderColor="Red"
+                    BorderWidth="5"
+                    CornerRadius="5"
+                    WidthRequest="150"
+                    HeightRequest="75" />
+    </StackLayout>
+</ContentPage>
